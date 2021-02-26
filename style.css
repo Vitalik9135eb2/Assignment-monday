@@ -1,0 +1,17 @@
+body{
+    background: url("assets/img/background-form.png") center center no-repeat;
+    height: 1388px;
+    width: 100%;
+    position: relative;
+}
+
+body::before{
+    content: "";
+    position: absolute;
+    background-image: url("assets/img/Overlay-form.png");
+    width: 100%;
+    height: 100vh;
+    padding: 218px 0 90px 0;
+    top: 0;
+
+}
