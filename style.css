@@ -1,8 +1,12 @@
 body{
-    background: url("assets/img/background-form.png") center center no-repeat;
+    background: url("assets/img/background-form.png") no-repeat;
+    background-size: 100%;
     height: 1388px;
     width: 100%;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 body::before{
@@ -11,7 +15,191 @@ body::before{
     background-image: url("assets/img/Overlay-form.png");
     width: 100%;
     height: 100vh;
-    padding: 218px 0 90px 0;
+    margin: 218px 0 90px 0;
     top: 0;
 
+}
+
+
+/**********************Form*****************/
+.form{
+    width: 920px;
+    height: 820px;
+    border-radius: 30px;
+    box-shadow: 0 0 36px 4px rgba(44, 22, 29, 0.3);
+    background-color: #ffffff;
+    margin: 130px 0 0 0;
+    z-index: 1;
+
+}
+
+/****************header**************/
+.header{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}
+
+.header__button{
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color:#e10101;
+    transform: translate(0px, -18px);
+    position: relative;   
+}
+
+.header__button::after{
+    content: " ";
+    position: absolute;
+    background-image: url("assets/img/х.png");
+    width: 16px;
+    height: 16px;
+    top: 8px;
+    left: 8px;
+}
+.header__button::before{
+    content: " ";
+    position: absolute;
+    background-image: url("assets/img/after-form.png");
+    width: 63px;
+    height: 8px;
+    bottom: -25px;
+    left: -14px;
+}
+
+.header__list{
+    display: flex;
+    margin: 30px 0 0 0;
+    font-size: 12px;
+    font-family: "Roboto";
+    color: #b8b9b9;
+}
+
+.header__list-item{
+    margin: 0 35px 0 0 ;
+}
+.header__list-item:hover{
+    border: solid 1px gray;
+}
+.header__list-item:last-child{
+    margin: 0;
+}
+
+.header__list-li{
+    color: #b8b9b9;  
+}
+
+.header__list-item:last-child .header__list-li{
+    color: #767777;
+}
+
+
+.form__title{
+    margin: 21px 0 0 0;
+    padding: 0 0 66px 0;
+    font-family: "Montserrat";
+    font-size: 38px;
+    line-height: 0.93;
+    letter-spacing: -0.76px;
+    position: relative;
+}
+
+.form__title::after{
+    content: " ";
+    position: absolute;
+    background-image: url("assets/img/after-form.png");
+    width: 63px;
+    height: 8px;
+    bottom: 31px;
+    left: 200px;
+}
+
+
+
+
+/****************main**************/
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    background-color: #f8f8f8;
+    box-shadow: inset 0 0 8.8px 0.2px rgba(1, 1, 1, 0.17);
+}
+.main__input{
+    width: 500px;
+    height: 40px;
+    margin: 0 0 22px 0;
+    border: solid 2px #ebebeb;
+}
+.main__input::placeholder{
+    padding: 0 0 0 31px;
+}
+.main__input:focus{
+    background-color: #d3e6f4;
+    border: solid 1px rgb(15, 56, 236);
+}
+.main__input:hover{
+    border: solid 2px rgba(128, 128, 128, 0.849)
+}
+
+.main__name{
+    margin: 50px 0 22px 0;
+}
+
+.main__textarea{
+    margin: 0 0 50px 0;
+    width: 500px;
+    height: 145px;
+}
+
+
+/*************footer***********/
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}
+
+.footer__block-input{
+    display: flex;
+    margin: 40px 0 0 0;
+    position: relative;
+}
+
+.footer__input{
+    width: 320px;
+    height: 40px;
+    border: solid 2px #ebebeb;
+    background-color: #f8f8f8;
+    position: relative;  
+}
+.footer__block-input::after{
+    content: "Ведите код на картинке справа";
+    position: absolute;
+    top: 45px;
+    left: 0;
+    font-size: 12px;
+    color: #82a6bf;
+}
+
+.footer__img{
+    width: 158px;
+    height: 58px;
+    margin: 0 0 0 22px;
+}
+
+.footer__button{
+    width: 208px;
+    height: 66px;
+    font-family: "Roboto";
+    font-size: 24px;
+    color: #ffffff;
+    background-color: #16ba98;
+    transform: translateY(55px);
+}
+
+.footer__button:active{
+    background-color: #148871;
 }
